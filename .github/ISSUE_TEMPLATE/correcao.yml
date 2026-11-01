@@ -1,0 +1,22 @@
+name: Correção de informação
+description: Avise sobre erro em ementa, bibliografia, pré-requisitos ou horários
+title: "[Correção] "
+labels: ["correção"]
+body:
+  - type: input
+    id: arquivo
+    attributes:
+      label: Arquivo ou pasta
+      description: "Ex.: s05/eletromagnetismo-aplicado/README.md"
+    validations:
+      required: true
+  - type: textarea
+    id: erro
+    attributes:
+      label: O que está errado?
+    validations:
+      required: true
+  - type: textarea
+    id: correto
+    attributes:
+      label: Qual é a informação correta? (e a fonte, se tiver)

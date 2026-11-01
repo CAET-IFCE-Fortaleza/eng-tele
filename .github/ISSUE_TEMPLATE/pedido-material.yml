@@ -1,0 +1,30 @@
+name: Pedido de material
+description: Peça resumos, listas ou dicas de uma disciplina
+title: "[Pedido] "
+labels: ["pedido de material"]
+body:
+  - type: input
+    id: disciplina
+    attributes:
+      label: Disciplina
+      description: "Nome ou pasta da disciplina (ex.: s04/redes-de-computadores-01)"
+    validations:
+      required: true
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo de material
+      multiple: true
+      options:
+        - Resumo
+        - Lista de exercícios
+        - Prova antiga
+        - Dicas
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: detalhes
+    attributes:
+      label: Detalhes
+      description: Assunto específico, professor, semestre etc.
